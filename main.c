@@ -38,9 +38,9 @@ int main(void)
 		aray = realloc(aray, (x + 1) * sizeof(char *));
 		aray[x] = NULL;
 		_execommand(ln, aray, NULL);
-		for (z = 0; z < x; z++)
-			free(aray[x]);
 	}
+	for (z = 0; z < x; z++)
+		free(aray[x]);
 	free(copy);
 	free(aray);
 	free(ln);
