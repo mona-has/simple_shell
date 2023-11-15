@@ -26,12 +26,12 @@ int main(void)
 		tokn = strtok(copy, " \n\t");
 		aray = malloc(sizeof(char *));
 		if (aray == NULL)
-			return (NULL);
+			return (-1);
 		while (tokn == NULL)
 		{
 			aray = realloc(aray, (x + 1) * sizeof(char *));
 			if (aray == NULL)
-				return (NULL);
+				return (-1);
 			aray[x] = _strdup(tokn);
 			tokn = strtok(NULL, " \n\t");
 			x++; }
